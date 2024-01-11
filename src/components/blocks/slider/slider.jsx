@@ -1,4 +1,4 @@
-import {createContext, useState, useEffect} from 'react';
+import {createContext, useState} from 'react';
 import ArrowsSlider from '../../ui/arrow/arrow';
 import SlidesList from '../slidesList/slidesList';
 import data from '../../../mocks/mockData.js';
@@ -8,8 +8,8 @@ import {SlyledSlider} from './styles.js';
 
 export const SliderContext = createContext();
 
-const Slider = function ({width, height, autoPlay, autoPlayTime}) {
-  const [items, setItems] = useState(data);
+const Slider = function ({width, height}) {
+  const [items] = useState(data);
   const [slide, setSlide] = useState(0);
   const [touchPosition, setTouchPosition] = useState(null);
 
