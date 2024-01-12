@@ -39,6 +39,30 @@ const data = [
     title: 'usefulMaterial',
     date: '12 февраля 2024',
   },
+  {
+    id: 6,
+    types: 'types__5',
+    img:
+      'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
+    title: 'usefulMaterial',
+    date: '12 февраля 2024',
+  },
+  {
+    id: 7,
+    types: 'types__5',
+    img:
+      'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
+    title: 'usefulMaterial',
+    date: '12 февраля 2024',
+  },
+  {
+    id: 8,
+    types: 'types__5',
+    img:
+      'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
+    title: 'usefulMaterial usefulMaterialusefulMaterialusefulMaterial',
+    date: '12 февраля 2024',
+  },
 ];
 
 export default data;

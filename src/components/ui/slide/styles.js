@@ -5,6 +5,7 @@ export const StyledSlide = styled.article`
   position: relative;
   width: ${(props) => (props.isLongTitle ? '688px' : '344px')};
   height: 453px;
+  margin-right: 2px;
 `;
 
 export const StyledWrapper = styled.div`

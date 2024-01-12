@@ -36,7 +36,7 @@ export const StyledArrow = styled.button`
   }
 
   &:disabled {
-    cursor: not-allowed;
+    cursor: none;
     & svg {
      opacity: 30%;
     }
