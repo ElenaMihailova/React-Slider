@@ -2,11 +2,11 @@ import MainPage from '../../pages/mainPage/mainPage';
 
 import {StyledMain} from './styles.js';
 
-export default function PageWrapper({...prop}) {
+export default function PageWrapper({data}) {
   return (
     <>
       <StyledMain>
-        <MainPage/>
+        <MainPage data={data} />
       </StyledMain>
     </>
   );

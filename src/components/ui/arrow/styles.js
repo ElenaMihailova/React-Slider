@@ -26,19 +26,19 @@ export const StyledArrow = styled.button`
   transform: ${(props) =>
     props.direction === 'left' ? 'rotate(180deg)' : 'none'};
 
-  &:hover {
+  &:disabled {
+    cursor: default;
+    & svg {
+      opacity: 10%;
+      fill: initial;
+    }
+  }
+  &:hover:not(:disabled) {
     cursor: pointer;
 
     & svg {
       fill: ${(props) => props.theme.colorGreyMediumDark};
       stroke: ${(props) => props.theme.colorGreyMediumDark};
-    }
-  }
-
-  &:disabled {
-    cursor: none;
-    & svg {
-     opacity: 30%;
     }
   }
 `;
