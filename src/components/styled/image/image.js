@@ -6,7 +6,7 @@ const Image = styled.img`
   height: 344px;
   width: 100%;
   object-fit: cover;
-  border-radius:  ${props => props.borderRadiusStyle === '600px' ? '600px' : '220px 0px'};
+  border-radius: ${(props) => props.borderRadiusStyle};
 `;
 
 export default Image;

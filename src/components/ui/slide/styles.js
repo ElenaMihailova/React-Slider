@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const StyledSlide = styled.article`
   flex: 1 0 auto;
   position: relative;
-  width: ${(props) => (props.isLongTitle ? '688px' : '344px')}; 
+  width: ${(props) => (props.isLongTitle? '688px':'344px')}; 
   height: 453px;
   margin-right: 2px;
   opacity: ${(props) => (props.isEmpty ? '0' : '1')};

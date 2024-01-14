@@ -11,6 +11,7 @@ export const StyledArrows = styled.div`
   margin: 0 auto;
   padding-left: ${(props) => props.theme.pagePadding};
   padding-right: ${(props) => props.theme.pagePadding};
+  padding-top: 20px;
 `;
 
 export const StyledArrow = styled.button`

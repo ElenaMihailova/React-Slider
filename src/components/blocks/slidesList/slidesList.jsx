@@ -10,22 +10,22 @@ export default function SlidesList() {
 
   let screens = [];
   let currentScreen = [];
-  let cellCount=0;
-  let startIndex=slideNumber*visibleSlides;
+  let cellCount = 0;
+  let startIndex = slideNumber * visibleSlides;
   let totalOffset = 0;
 
   for (let i = startIndex; i < items.length; i++) {
     let slide = items[i];
-    let slideCells=isDoubleCell(slide)? 2:1;
-     
-    if (cellCount+slideCells>visibleSlides) {
+    let slideCells = isDoubleCell(slide) ? 2 : 1;
+
+    if (cellCount + slideCells > visibleSlides) {
       screens.push(currentScreen);
-      currentScreen = [slide]
-      currentScreen=[];
-      cellCount = slideCells;  
+      currentScreen = [slide];
+      currentScreen = [];
+      cellCount = slideCells;
     } else {
       currentScreen.push(slide);
-      cellCount+=slideCells;
+      cellCount += slideCells;
     }
   }
 
@@ -45,7 +45,7 @@ export default function SlidesList() {
   const offsetPercent = (totalOffset / visibleSlides) * 100;
 
   return (
-    <List style={{ transform: `translateX(-${offsetPercent})` }} >
+    <List style={{transform: `translateX(-${offsetPercent})`}}>
       {screens.map((slides, screenIndex) =>
         slides.map((slide, slideIndex) => (
           <Slide
