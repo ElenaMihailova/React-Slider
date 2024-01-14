@@ -1,15 +1,28 @@
-import {createContext, useState} from 'react';
+import {createContext, useState, useEffect} from 'react';
 import ArrowsSlider from '../../ui/arrow/arrow';
 import SlidesList from '../slidesList/slidesList';
 import PropTypes from 'prop-types';
 
 import {SlyledSlider} from './styles.js';
 
-export const SliderContext = createContext();
+export const SliderContext=createContext();
+const SLIDE_WIDTH=344;
 
 const Slider = function ({data, width, height}) {
   const [slide, setSlide] = useState(0);
-  const visibleSlides = 3;
+  const [visibleSlides, setVisibleSlides] = useState(0);
+  
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      const newVisibleSlides = Math.floor(screenWidth / SLIDE_WIDTH);
+      setVisibleSlides(newVisibleSlides);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const changeSlide = (direction = 1) => {
     let slideNumber = slide + direction;

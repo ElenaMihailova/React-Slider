@@ -12,7 +12,7 @@ const data = [
     types: 'types__2',
     img:
       'https://celes.club/uploads/posts/2021-12/1640090810_4-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-4.jpg',
-    title: 'Number 2 usefulMaterial',
+    title: 'Number 2 usefulMaterial Number 2 usefulMaterial',
     date: '12 февраля 2024',
   },
   {
@@ -44,7 +44,7 @@ const data = [
     types: 'types__5',
     img:
       'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
-    title: 'Number 6 usefulMaterial',
+    title: 'Number 6 usefulMaterial Number 6 usefulMaterial ',
     date: '12 февраля 2024',
   },
   {
@@ -61,6 +61,22 @@ const data = [
     img:
       'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
     title: 'Number 8 usefulMaterial',
+    date: '12 февраля 2024',
+  },
+  {
+    id: 9,
+    types: 'types__5',
+    img:
+      'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
+    title: 'Number 9 usefulMaterial',
+    date: '12 февраля 2024',
+  },
+  {
+    id: 10,
+    types: 'types__5',
+    img:
+      'https://celes.club/uploads/posts/2021-12/1640090732_1-celes-club-p-zhivotnie-v-derevne-zhivotnie-krasivo-foto-1.jpg',
+    title: 'Number 10 usefulMaterial',
     date: '12 февраля 2024',
   },
 ];

@@ -21,4 +21,14 @@ export const StyledTitle = styled.h1`
     }
     return fontSize;
   }};
+
+  @media (max-width: 768px) {
+    font-size: ${(props) => {
+      let fontSize = '20px';
+      if (props.$size === TitleSize.BIG) {
+        fontSize = '50px';
+      }
+      return fontSize;
+    }};
+  }
 `;

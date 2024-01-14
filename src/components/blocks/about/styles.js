@@ -8,4 +8,8 @@ export const StyledAbout=styled.div`
   display: flex;
   flex-direction: column;
   gap: 54px;
+
+  @media (max-width: 768px) {
+    padding-right: 5%;
+    };
 `;
