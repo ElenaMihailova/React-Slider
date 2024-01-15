@@ -2,10 +2,10 @@
 
 # Technology Stack
 
-React
-Webpack
-ESLint
-Prettier
+- React
+- Webpack
+- ESLint
+- Prettier
 
 # Live Demo
 
