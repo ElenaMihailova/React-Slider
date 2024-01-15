@@ -145,30 +145,38 @@ const data = [
   },
   {
     id: 17,
-    img: 'https://interactives.natgeofe.com/high-touch/ngm-23-YIP/builds/main/img/photos/NGS82828S2122111833580.jpg',
+    img:
+      'https://interactives.natgeofe.com/high-touch/ngm-23-YIP/builds/main/img/photos/NGS82828S2122111833580.jpg',
     location: 'Helen Reef, Palau',
-    description: 'Brian Fidiiy jumps from a boat into the Helen Reef lagoon to fish for food with a homemade speargun. Fidiiy and fellow Helen Reef rangers—all members of the local Indigenous population—protect Palau’s most biologically diverse reef from illegal commercial fishing.',
+    description:
+      'Brian Fidiiy jumps from a boat into the Helen Reef lagoon to fish for food with a homemade speargun. Fidiiy and fellow Helen Reef rangers—all members of the local Indigenous population—protect Palau’s most biologically diverse reef from illegal commercial fishing.',
     author: 'KILIII YÜYAN',
   },
   {
     id: 18,
-    img: 'https://interactives.natgeofe.com/high-touch/ngm-23-YIP/builds/main/img/photos/MM10024__221002_00335.jpg',
+    img:
+      'https://interactives.natgeofe.com/high-touch/ngm-23-YIP/builds/main/img/photos/MM10024__221002_00335.jpg',
     location: 'Lagos, Nigeria',
-    description: 'Ashley Okoli dances at a Lagos nightclub, which offers a rare welcoming space for people of all sexual orientations. Same-sex relationships are illegal in Nigeria, yet in the past four years LGBTQ activists have celebrated Pride month with performances and protests in some parts of the country.',
+    description:
+      'Ashley Okoli dances at a Lagos nightclub, which offers a rare welcoming space for people of all sexual orientations. Same-sex relationships are illegal in Nigeria, yet in the past four years LGBTQ activists have celebrated Pride month with performances and protests in some parts of the country.',
     author: 'YAGAZIE EMEZI',
   },
   {
     id: 19,
-    img: 'https://interactives.natgeofe.com/high-touch/ngm-23-YIP/builds/main/img/photos/EstherHorvath_WomenofArcticScience_022.jpg',
+    img:
+      'https://interactives.natgeofe.com/high-touch/ngm-23-YIP/builds/main/img/photos/EstherHorvath_WomenofArcticScience_022.jpg',
     location: 'Ny-Ålesund, Norway',
-    description: 'The Reverend Siv Limstrand of the Church of Norway is the only pastor for the Svalbard archipelago in the Arctic Ocean, welcoming worshippers of any nationality and religion. As the Arctic warms, Limstrand’s congregation of scientists and local people is chronicling, and coping with, climate change.',
+    description:
+      'The Reverend Siv Limstrand of the Church of Norway is the only pastor for the Svalbard archipelago in the Arctic Ocean, welcoming worshippers of any nationality and religion. As the Arctic warms, Limstrand’s congregation of scientists and local people is chronicling, and coping with, climate change.',
     author: 'ESTHER HORVATH',
   },
   {
     id: 20,
-    img: 'https://interactives.natgeofe.com/high-touch/ngm-23-YIP/builds/main/img/photos/MM9237_221204_060317.jpg',
+    img:
+      'https://interactives.natgeofe.com/high-touch/ngm-23-YIP/builds/main/img/photos/MM9237_221204_060317.jpg',
     location: 'South Atlantic Ocean',
-    description: 'Volcanologists and mountaineers return after a weeks-long expedition to Mount Michael, a remote volcano in the South Sandwich Islands. The team made a successful first ascent and study of the peak, which holds one of Earth’s few lava lakes.',
+    description:
+      'Volcanologists and mountaineers return after a weeks-long expedition to Mount Michael, a remote volcano in the South Sandwich Islands. The team made a successful first ascent and study of the peak, which holds one of Earth’s few lava lakes.',
     author: 'RENAN OZTURK',
   },
 ];

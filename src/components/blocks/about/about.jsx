@@ -1,6 +1,5 @@
 import {StyledAbout} from './styles.js';
 import Title from '../../ui/title/title.jsx';
-import {P} from '../../styled/index.js';
 import {StyledCopyright} from '../../ui/copyright/copyright.jsx';
 
 export default function About() {

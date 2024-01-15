@@ -1,16 +1,11 @@
 import Image from '../../styled/image/image.js';
-import {ThemeContext} from 'styled-components';
-import {useContext} from 'react';
 
 import {StyledSlide, StyledWrapper, StyledImage} from './styles.js';
 import {Description} from '../description/description.jsx';
 import {Author} from '../author/author.jsx';
-import { Location } from '../location/location.jsx';
-
+import {Location} from '../location/location.jsx';
 
 function Slide({data, isDouble, previousBorderRadiusStyle}) {
-  const theme = useContext(ThemeContext);
-
   const {img, location, description, author} = data;
   const isEmpty = data.isEmpty;
 
@@ -19,14 +14,13 @@ function Slide({data, isDouble, previousBorderRadiusStyle}) {
       {!isEmpty && (
         <>
           <StyledImage>
-            <Image
-              src={img}
-              alt={location}
-            />
+            <Image src={img} alt={location} />
           </StyledImage>
           <StyledWrapper>
             <Description>{description}</Description>
-            <Author>PHOTOGRAPH BY <span>{author}</span></Author>
+            <Author>
+              PHOTOGRAPH BY <span>{author}</span>
+            </Author>
             <Location>{location}</Location>
           </StyledWrapper>
         </>
