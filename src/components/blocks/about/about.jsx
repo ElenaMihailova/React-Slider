@@ -1,17 +1,17 @@
 import {StyledAbout} from './styles.js';
 import Title from '../../ui/title/title.jsx';
 import {P} from '../../styled/index.js';
+import {StyledCopyright} from '../../ui/copyright/copyright.jsx';
 
 export default function About() {
   return (
     <StyledAbout>
       <Title level='1' size='big'>
-        Полезные материалы
+        The best photos of the year 2023 from the magazine National Geographic
       </Title>
-      <P>
-        Собрали для вас полезные исследования схемы кормления и другие
-        материалы, которые пригодятся для лучших результатов на вашем хозяйстве
-      </P>
+      <StyledCopyright href='https://www.nationalgeographic.com/premium/graphics/pictures-of-the-year-2023'>
+        Information from the website National Geographic
+      </StyledCopyright>
     </StyledAbout>
   );
 }

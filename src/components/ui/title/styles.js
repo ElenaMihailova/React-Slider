@@ -7,7 +7,7 @@ export const StyledTitle = styled.h1`
   font-weight: ${(props) => {
     let fontWeight = '600';
     if (props.$size === TitleSize.BIG) {
-      fontWeight = '700';
+      fontWeight = '600';
     }
     return fontWeight;
   }};
@@ -15,12 +15,13 @@ export const StyledTitle = styled.h1`
   letter-spacing: -0.576px;
   color: ${(props) => props.color || props.theme.colorForTitle};
   font-size: ${(props) => {
-    let fontSize = '28px';
+    let fontSize = '24px';
     if (props.$size === TitleSize.BIG) {
-      fontSize = '72px';
+      fontSize = '54px';
     }
     return fontSize;
-  }};
+}};
+  text-align: center;
 
   @media (max-width: 768px) {
     font-size: ${(props) => {

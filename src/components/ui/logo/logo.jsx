@@ -4,7 +4,7 @@ import {StyledLogo} from './styled';
 
 function Logo() {
   return (
-    <StyledLogo href='/'>
+    <StyledLogo href='https://github.com/ElenaMihailova'>
       <LogoImage />
     </StyledLogo>
   );

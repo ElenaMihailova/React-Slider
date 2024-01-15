@@ -1,4 +1,4 @@
-# Test task
+# React Carousel
 
 # Technology Stack
 

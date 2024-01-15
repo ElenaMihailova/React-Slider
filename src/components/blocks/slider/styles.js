@@ -5,4 +5,5 @@ export const SlyledSlider = styled.div`
   position: relative;
   margin: 0;
   padding: 0;
+  height: 643px;
 `;

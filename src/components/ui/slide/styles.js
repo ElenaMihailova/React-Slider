@@ -1,16 +1,23 @@
 import styled from 'styled-components';
 
 export const StyledSlide = styled.article`
-  flex: 1 0 auto;
+  flex: 1 0 33%;
   position: relative;
-  width: ${(props) => (props.isLongTitle? '688px':'344px')}; 
-  height: 453px;
+  height: auto;
   margin-right: 2px;
   opacity: ${(props) => (props.isEmpty ? '0' : '1')};
 `;
 
 export const StyledWrapper = styled.div`
-  padding-left: 8px;
-  padding-right: 8px;
-  padding-top: ${(props) => props.theme.indent};
+  padding: ${(props) => props.theme.indent};
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+
+export const StyledImage = styled.div`
+  height: 267px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

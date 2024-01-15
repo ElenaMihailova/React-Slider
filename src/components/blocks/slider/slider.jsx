@@ -5,13 +5,13 @@ import PropTypes from 'prop-types';
 
 import {SlyledSlider} from './styles.js';
 
-export const SliderContext=createContext();
-const SLIDE_WIDTH=344;
+export const SliderContext = createContext();
+const SLIDE_WIDTH = 344;
 
 const Slider = function ({data, width, height}) {
   const [slide, setSlide] = useState(0);
   const [visibleSlides, setVisibleSlides] = useState(0);
-  
+
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
@@ -53,8 +53,8 @@ const Slider = function ({data, width, height}) {
           visibleSlides,
         }}
       >
-        <SlidesList />
         <ArrowsSlider />
+        <SlidesList />
       </SliderContext.Provider>
     </SlyledSlider>
   );
