@@ -1,4 +1,4 @@
-import {createContext, useState, useEffect} from 'react';
+import {createContext, useState, useEffect, useRef} from 'react';
 import ArrowsSlider from '../../ui/arrow/arrow';
 import SlidesList from '../slidesList/slidesList';
 import PropTypes from 'prop-types';
@@ -6,43 +6,39 @@ import PropTypes from 'prop-types';
 import {SlyledSlider} from './styles.js';
 
 export const SliderContext = createContext();
-const SLIDE_WIDTH = 344;
+
+const getWidth = () => window.innerWidth;
 
 const Slider = function ({data, width, height}) {
+  const [items] = useState([]);
   const [slide, setSlide] = useState(0);
-  const [visibleSlides, setVisibleSlides] = useState(0);
+  const [transition, setTransition] = useState(0);
+  const [translate, setTranslate] = useState(getWidth());
+
+  const sliderRef = useRef();
 
   useEffect(() => {
-    const handleResize = () => {
-      const screenWidth = window.innerWidth;
-      const newVisibleSlides = Math.floor(screenWidth / SLIDE_WIDTH);
-      setVisibleSlides(newVisibleSlides);
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    if (transition === 0) {
+      setTransition(0.5);
+    }
+  }, [transition]);
 
   const changeSlide = (direction = 1) => {
-    let slideNumber = slide + direction;
-
-    let maxSlideNumber = Math.ceil(data.length / visibleSlides) - 1;
-
-    if (slideNumber > maxSlideNumber) {
-      slideNumber = maxSlideNumber;
-    } else if (slideNumber < 0) {
-      slideNumber = 0;
+    if (direction === 1) {
+      setTranslate(translate + getWidth());
+      setSlide(slide === items.length - 1 ? 0 : slide + 1);
+    } else {
+      setTranslate(0);
+      setSlide(slide === 0 ? items.length - 1 : slide - 1);
     }
-    setSlide(slideNumber);
   };
 
   const goToSlide = (number) => {
-    setSlide(number % data.length);
+    setSlide(number % items.length);
   };
 
   return (
-    <SlyledSlider style={{width, height}}>
+    <SlyledSlider style={{width, height}} ref={sliderRef}>
       <SliderContext.Provider
         value={{
           goToSlide,
@@ -50,11 +46,14 @@ const Slider = function ({data, width, height}) {
           slidesCount: data.length,
           slideNumber: slide,
           items: data,
-          visibleSlides,
         }}
       >
         <ArrowsSlider />
-        <SlidesList />
+        <SlidesList
+          translate={translate}
+          transition={transition}
+          slideWidth={getWidth()}
+        />
       </SliderContext.Provider>
     </SlyledSlider>
   );

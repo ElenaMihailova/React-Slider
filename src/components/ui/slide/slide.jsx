@@ -5,26 +5,23 @@ import {Description} from '../description/description.jsx';
 import {Author} from '../author/author.jsx';
 import {Location} from '../location/location.jsx';
 
-function Slide({data, isDouble, previousBorderRadiusStyle}) {
+function Slide({data}) {
   const {img, location, description, author} = data;
-  const isEmpty = data.isEmpty;
 
   return (
-    <StyledSlide isLongTitle={isDouble} isEmpty={isEmpty}>
-      {!isEmpty && (
-        <>
-          <StyledImage>
-            <Image src={img} alt={location} />
-          </StyledImage>
-          <StyledWrapper>
-            <Description>{description}</Description>
-            <Author>
-              PHOTOGRAPH BY <span>{author}</span>
-            </Author>
-            <Location>{location}</Location>
-          </StyledWrapper>
-        </>
-      )}
+    <StyledSlide>
+      <>
+        <StyledImage>
+          <Image src={img} alt={location} />
+        </StyledImage>
+        <StyledWrapper>
+          <Description>{description}</Description>
+          <Author>
+            PHOTOGRAPH BY <span>{author}</span>
+          </Author>
+          <Location>{location}</Location>
+        </StyledWrapper>
+      </>
     </StyledSlide>
   );
 }
