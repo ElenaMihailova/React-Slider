@@ -18,4 +18,13 @@ body {
   line-height: 133%;
   font-weight: 400;
   color: ${(props) => props.theme.colorBlackForText};
-}`;
+
+  #root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
+  }
+}
+`;

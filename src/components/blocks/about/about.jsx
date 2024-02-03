@@ -6,10 +6,10 @@ export default function About() {
   return (
     <StyledAbout>
       <Title level='1' size='big'>
-        The best photos of the year 2023 from the magazine National Geographic
+      20 of the Best Book Covers of 2023
       </Title>
-      <StyledCopyright href='https://www.nationalgeographic.com/premium/graphics/pictures-of-the-year-2023'>
-        Information from the website National Geographic
+      <StyledCopyright href='https://www.printmag.com/book-covers/50-best-book-covers-of-2023/'>
+        Information from the website Print
       </StyledCopyright>
     </StyledAbout>
   );

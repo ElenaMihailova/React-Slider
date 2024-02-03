@@ -8,8 +8,5 @@ export const Author = styled(P)`
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
-  text-align: left;
-  text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
+  text-align: center;
 `;

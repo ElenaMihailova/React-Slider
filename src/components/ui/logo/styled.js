@@ -6,7 +6,10 @@ export const StyledLogo = styled.a`
   align-items: center;
   text-decoration: none;
 
-  &::hover {
+  transition: transform 0.3s ease-in-out;
+  &:hover {
     text-decoration: none;
+    transform: scale(1.1);
+    
   }
 `;

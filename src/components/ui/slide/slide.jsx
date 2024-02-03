@@ -1,27 +1,22 @@
 import Image from '../../styled/image/image.js';
 
-import {StyledSlide, StyledWrapper, StyledImage} from './styles.js';
-import {Description} from '../description/description.jsx';
+import {StyledSlide, Wrapper, StyledImage} from './styles.js';
 import {Author} from '../author/author.jsx';
-import {Location} from '../location/location.jsx';
+
 
 function Slide({data}) {
-  const {img, location, description, author} = data;
+  const {img, author} = data;
 
   return (
     <StyledSlide>
-      <>
+      <Wrapper>
         <StyledImage>
-          <Image src={img} alt={location} />
+          <Image src={img} alt={author} />
         </StyledImage>
-        <StyledWrapper>
-          <Description>{description}</Description>
           <Author>
-            PHOTOGRAPH BY <span>{author}</span>
+          Design by {author}
           </Author>
-          <Location>{location}</Location>
-        </StyledWrapper>
-      </>
+      </Wrapper>
     </StyledSlide>
   );
 }

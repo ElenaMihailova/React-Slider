@@ -1,44 +1,17 @@
-import {createContext, useState, useEffect, useRef} from 'react';
+import { Swiper, SwiperSlide } from "swiper/react"; 
 import ArrowsSlider from '../../ui/arrow/arrow';
 import SlidesList from '../slidesList/slidesList';
 import PropTypes from 'prop-types';
 
 import {SlyledSlider} from './styles.js';
 
-export const SliderContext = createContext();
 
 const getWidth = () => window.innerWidth;
 
 const Slider = function ({data, width, height}) {
-  const [items] = useState([]);
-  const [slide, setSlide] = useState(0);
-  const [transition, setTransition] = useState(0);
-  const [translate, setTranslate] = useState(getWidth());
-
-  const sliderRef = useRef();
-
-  useEffect(() => {
-    if (transition === 0) {
-      setTransition(0.5);
-    }
-  }, [transition]);
-
-  const changeSlide = (direction = 1) => {
-    if (direction === 1) {
-      setTranslate(translate + getWidth());
-      setSlide(slide === items.length - 1 ? 0 : slide + 1);
-    } else {
-      setTranslate(0);
-      setSlide(slide === 0 ? items.length - 1 : slide - 1);
-    }
-  };
-
-  const goToSlide = (number) => {
-    setSlide(number % items.length);
-  };
 
   return (
-    <SlyledSlider style={{width, height}} ref={sliderRef}>
+    <SlyledSlider style={{width, height}} >
       <SliderContext.Provider
         value={{
           goToSlide,
@@ -48,12 +21,12 @@ const Slider = function ({data, width, height}) {
           items: data,
         }}
       >
-        <ArrowsSlider />
         <SlidesList
           translate={translate}
           transition={transition}
           slideWidth={getWidth()}
         />
+        <ArrowsSlider />
       </SliderContext.Provider>
     </SlyledSlider>
   );

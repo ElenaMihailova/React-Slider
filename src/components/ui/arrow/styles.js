@@ -9,9 +9,8 @@ export const StyledArrows = styled.div`
   height: 100%;
   max-width: ${(props) => props.theme.pageWidth};
   margin: 0 auto;
-  padding-left: ${(props) => props.theme.pagePadding};
-  padding-right: ${(props) => props.theme.pagePadding};
-  padding-bottom: ${(props) => props.theme.indent};
+  padding: ${(props) => props.theme.indent};
+  width: 80%;
 `;
 
 export const StyledArrow = styled.button`

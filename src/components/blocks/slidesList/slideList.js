@@ -8,4 +8,6 @@ export const List = styled.ul`
   padding: 0;
   margin: 0;
   padding-left: 20px;
+  flex: 1;
+  align-items: center;
 `;

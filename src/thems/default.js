@@ -6,7 +6,7 @@ export const DefaultTheme = {
   colorGreyMediumLight: '#A2ACC7',
   colorGrayDark: '#525C7A',
   colorGreyMediumDark: '#7884A5',
-  pagePadding: '40px',
+  pagePadding: '20px',
   indent: '32px',
   fontFamily: '"Raleway", sans-serif',
   fontSizeDefault: '24px',
