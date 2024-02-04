@@ -13,7 +13,6 @@ export const Slider = styled(Swiper)`
   height: 100%;
   width: 100%;
   transition: transform 0.5s ease-in-out;
-  padding-left: 20px;
   align-items: center;
   justify-content: space-around;
 `;
@@ -30,6 +29,14 @@ export const Wrapper = styled.div`
   align-items: center;
   padding: ${(props) => props.theme.pagePadding};
   box-shadow: 5px 5px 21px -5px rgba(120, 132, 165, 0.61) inset;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 5px 5px 21px -5px rgba(120, 132, 165, 0.9) inset;
+    transform: scale(1.05);
+  }
+
+  cursor: pointer;
 `;
 
 export const Arrows = styled.div`
