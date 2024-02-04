@@ -1,46 +1,49 @@
-import { Swiper, SwiperSlide } from "swiper/react"; 
-import ArrowsSlider from '../../ui/arrow/arrow';
-import SlidesList from '../slidesList/slidesList';
-import PropTypes from 'prop-types';
+import {SwiperSlide} from 'swiper/react';
+import 'swiper/css';
+import {Navigation} from 'swiper/modules';
+import Image from '../../styled/image/image';
+import {Author} from '../../ui/author/author';
+import 'swiper/css/navigation';
 
-import {SlyledSlider} from './styles.js';
+import * as Styled from './styles';
 
-
-const getWidth = () => window.innerWidth;
-
-const Slider = function ({data, width, height}) {
-
+function Slider({data}) {
   return (
-    <SlyledSlider style={{width, height}} >
-      <SliderContext.Provider
-        value={{
-          goToSlide,
-          changeSlide,
-          slidesCount: data.length,
-          slideNumber: slide,
-          items: data,
-        }}
-      >
-        <SlidesList
-          translate={translate}
-          transition={transition}
-          slideWidth={getWidth()}
-        />
-        <ArrowsSlider />
-      </SliderContext.Provider>
-    </SlyledSlider>
+    <Styled.Slider
+      modules={[Navigation]}
+      spaceBetween={20}
+      loop
+      navigation={{prevEl: '.custom-prev', nextEl: '.custom-next'}}
+      breakpoints={{
+        768: {
+          slidesPerView: 1,
+        },
+        1200: {
+          slidesPerView: 3,
+        },
+      }}
+    >
+      {data &&
+        data.map((slide) => (
+          <SwiperSlide key={slide.id} data={slide}>
+            <Styled.Wrapper>
+              <Styled.Image>
+                <Image src={slide.img} />
+              </Styled.Image>
+              <Author>Design by {slide.author}</Author>
+            </Styled.Wrapper>
+          </SwiperSlide>
+        ))}
+      <Styled.Arrows>
+        <Styled.Arrow direction='left' className='custom-prev'>
+          <Styled.Icon />
+        </Styled.Arrow>
+        <Styled.Arrow direction='right' className='custom-next'>
+          <Styled.Icon />
+        </Styled.Arrow>
+      </Styled.Arrows>
+    </Styled.Slider>
   );
-};
-
-Slider.propTypes = {
-  data: PropTypes.array.isRequired,
-  width: PropTypes.string,
-  height: PropTypes.string,
-};
-
-Slider.defaultProps = {
-  width: '100%',
-  height: '100%',
-};
+}
 
 export default Slider;
