@@ -9,7 +9,7 @@
 - ESLint
 - Prettier
 
-# Live Demo
+### Live Demo
 
 Experience the deployed application [here](https://statuesque-chebakia-474301.netlify.app)
 
@@ -23,6 +23,6 @@ Experience the deployed application [here](https://statuesque-chebakia-474301.ne
 - ESLint
 - Prettier
 
-# Live Demo
+### Live Demo
 
 Experience the deployed application [here](https://dulcet-melomakarona-354249.netlify.app)
