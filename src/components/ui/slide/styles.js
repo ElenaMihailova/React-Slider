@@ -16,8 +16,10 @@ export const StyledWrapper = styled.div`
 `;
 
 export const StyledImage = styled.div`
-  height: 267px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  aspect-ratio: 367/267;
+
 `;
